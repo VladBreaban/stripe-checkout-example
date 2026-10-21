@@ -1,0 +1,37 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Start checkout";
+}
+<section class="card" aria-labelledby="h">
+    <p class="eyebrow">Checkout demo</p>
+    <h1 id="h">Start a test checkout</h1>
+    <p class="lead">This page asks the API to create a Stripe Checkout Session, then sends you to Stripe's hosted payment page.</p>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-error" role="alert" aria-live="assertive">
+            <strong>Checkout could not start.</strong>
+            <p>@Model.ErrorMessage</p>
+            <p>You can try again below.</p>
+        </div>
+    }
+
+    <ol class="steps">
+        <li><span>1</span><div><b>Create session</b><p>The API uses its configured Stripe price.</p></div></li>
+        <li><span>2</span><div><b>Pay on Stripe</b><p>The final price is shown on the hosted checkout page.</p></div></li>
+        <li><span>3</span><div><b>Webhook confirms</b><p>Only the server webhook marks a payment as complete.</p></div></li>
+    </ol>
+
+    <form method="post" class="checkout-form">
+        <input type="hidden" asp-for="CheckoutKey" />
+        <button type="submit" class="btn btn-primary">
+            <span class="btn-label">Continue to Stripe Checkout</span>
+        </button>
+    </form>
+
+    <aside class="note" aria-label="Test mode information">
+        <h2>Test mode only</h2>
+        <p>No real cards are accepted and nothing is charged. Use a Stripe test card such as <code>4242 4242 4242 4242</code> with any future expiry date and any CVC.</p>
+    </aside>
+</section>

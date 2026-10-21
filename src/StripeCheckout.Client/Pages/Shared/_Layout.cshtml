@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@(ViewData["Title"] ?? "Checkout") · Stripe Checkout example</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="topbar">
+        <a class="wordmark" asp-page="/Index">Stripe Checkout <span>example</span></a>
+        <span class="badge" title="This demo uses Stripe test mode only">Test mode</span>
+    </header>
+    <main id="main" class="shell">
+        @RenderBody()
+    </main>
+    <footer class="foot">
+        <p>Test-mode demonstration. No real cards are charged. Use Stripe test card numbers only.</p>
+    </footer>
+</body>
+</html>

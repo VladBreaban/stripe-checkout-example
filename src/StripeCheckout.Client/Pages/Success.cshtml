@@ -1,0 +1,14 @@
+@page
+@{
+    ViewData["Title"] = "Returned from checkout";
+}
+<section class="card" aria-labelledby="h">
+    <p class="eyebrow">Returned from Stripe</p>
+    <h1 id="h">Back from checkout</h1>
+    <div class="alert alert-info" role="status">
+        <strong>This page does not confirm payment.</strong>
+        <p>This is the return page used after Stripe Checkout. Opening it directly does not prove a checkout took place. Payment is confirmed solely when the server receives and verifies the Stripe webhook.</p>
+    </div>
+    <p class="lead">In a real integration, fulfilment would happen after the webhook, and the customer would be notified separately.</p>
+    <a class="btn btn-ghost" asp-page="/Index">Back to start</a>
+</section>
