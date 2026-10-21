@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/StripeCheckout.Api/StripeCheckout.Api.csproj" />
+  <Project Path="tests/StripeCheckout.Tests/StripeCheckout.Tests.csproj" />
+</Solution>

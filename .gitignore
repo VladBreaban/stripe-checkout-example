@@ -1,8 +1,12 @@
-node_modules/
-.env
-.env.*
-!.env.example
-data/
+**/bin/
+**/obj/
+**/data/
+**/TestResults/
+.vs/
+.idea/
+*.user
 *.db
 *.db-shm
 *.db-wal
+appsettings.Local.json
+.env
