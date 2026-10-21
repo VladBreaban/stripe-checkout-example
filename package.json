@@ -1,0 +1,12 @@
+{
+  "name": "stripe-checkout-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": { "stripe": "22.2.2" }
+}
